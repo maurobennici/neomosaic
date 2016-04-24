@@ -1,0 +1,4 @@
+Coordinates of 3 known points 
+1647 642 
+ 614 748 
+ 1151 278

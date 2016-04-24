@@ -1,0 +1,60 @@
+﻿@model NEO.Code.Model.AsteroidModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>NEO Researcher</h1>
+    <p class="lead">Upload you photo and NEO will do the job!</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>NEO Researcher</h2>
+    </div>
+    <div class="col-md-8">
+        @if (Model != null)
+        {
+            <h1 style="color: red">Your NEO is a possible: @((ViewBag.result).ToString())</h1>
+        }
+    </div>
+</div>
+
+<form method="post">
+    <div class="row">
+        <div class="col-md-4">
+            @Html.LabelFor(x => x.G, new { required="required"})
+            @Html.TextAreaFor(x => x.G, new { required = "required" })
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(x => x.H, new { required = "required" })
+            @Html.TextAreaFor(x => x.H, new { required = "required" })
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(x => x.M, new { required = "required" })
+            @Html.TextAreaFor(x => x.M, new { required = "required" })
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            @Html.LabelFor(x => x.n, new { required = "required" })
+            @Html.TextAreaFor(x => x.n, new { required = "required" })
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(x => x.e, new { required = "required" })
+            @Html.TextAreaFor(x => x.e, new { required = "required" })
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(x => x.a, new { required = "required" })
+            @Html.TextAreaFor(x => x.a, new { required = "required" })
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <button type="submit">classify</button>
+        </div>
+    </div>
+
+</form>

@@ -15,8 +15,33 @@ namespace NEO.Controllers
             return View();
         }
 
+        public ActionResult Neo2()
+        {
+            return View();
+        }
+
+        public ActionResult Neo3()
+        {
+            return View();
+        }
+
+        public ActionResult Neo4()
+        {
+            return View();
+        }
+
+        public ActionResult Neo5()
+        {
+            return View();
+        }
+
+        public ActionResult Classify()
+        {
+            return View();
+        }
+
         [HttpPost]
-        public ActionResult Index(AsteroidModel asteroid)
+        public ActionResult Classify(AsteroidModel asteroid)
         {
             var ac = new AsteroidsClassification();
             ac.LoadMachine(false);

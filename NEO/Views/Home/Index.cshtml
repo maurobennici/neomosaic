@@ -1,60 +1,57 @@
-﻿@model NEO.Code.Model.AsteroidModel
-@{
-    ViewBag.Title = "Home Page";
+﻿@{
+    Layout = null;
 }
+<!DOCTYPE html>
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo Mosaic Researcher</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
+    <link href="~/Content/site.css" rel="stylesheet">
+    <link href="~/Content/neo.css" rel="stylesheet" type='text/css' media='screen' charset='utf-8'>
 
-<div class="jumbotron">
-    <h1>NEO Researcher</h1>
-    <p class="lead">Upload you photo and NEO will do the job!</p>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>NEO Researcher</h2>
-    </div>
-    <div class="col-md-8">
-        @if (Model != null)
-        {
-            <h1 style="color: red">Your NEO is a possible: @((ViewBag.result).ToString())</h1>
-        }
-    </div>
-</div>
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
 
-<form method="post">
-    <div class="row">
-        <div class="col-md-4">
-            @Html.LabelFor(x => x.G)
-            @Html.TextAreaFor(x => x.G)
-        </div>
-        <div class="col-md-4">
-            @Html.LabelFor(x => x.H)
-            @Html.TextAreaFor(x => x.H)
-        </div>
-        <div class="col-md-4">
-            @Html.LabelFor(x => x.M)
-            @Html.TextAreaFor(x => x.M)
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-4">
-            @Html.LabelFor(x => x.n)
-            @Html.TextAreaFor(x => x.n)
+</head>
+<body>
+    <div class="container body-content">
+
+        <a href="/"><img src="~/images/neo.png" alt="Neo Mosaic" class="logo" height="" width=""></a>
+
+        <div class="">
+            <center class="lead">NEO Mosaic Researcher</center>
+            <center class="lead">Upload your photo and NEO will do the job!</center>
         </div>
-        <div class="col-md-4">
-            @Html.LabelFor(x => x.e)
-            @Html.TextAreaFor(x => x.e)
+
+        <div class="row next">
+            <div class="col-md-12">
+                <button onclick="window.location.href='/home/neo2'" type="submit" class="btn btn-primary">Next</button>
+            </div>
         </div>
-        <div class="col-md-4">
-            @Html.LabelFor(x => x.a)
-            @Html.TextAreaFor(x => x.a)
-        </div>
+
+        <img src="~/images/nightsky_clicked.png" alt="Upload the Picture" class="uploaded logo img-rounded img-responsive" width="100%">
+
+        @*<input class="position upload_button" type="file" name="pic" accept="image/*">*@
+
+
+
+
+        <hr>
+        <footer>
+            <p>&copy; 2016 - Neo Mosaic Researcher</p>
+        </footer>
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <button type="submit">classify</button>
-        </div>
-    </div>
+    <script src="~/Scripts/jquery-2.2.3.js"></script>
 
-</form>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/respond.js"></script>
+
+
+
+
+</body>
+</html>
